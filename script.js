@@ -30,3 +30,14 @@ let additionalBlock = {
 $('main').append('<h2>' + additionalBlock.title + '</h2>');
 $('main').append(`<p>${additionalBlock.text}</p>`);
 
+$('button').click(() => {
+    console.log("Yeah, you clicked me")
+  })
+
+  $('.anotherButton').click(() => {
+    $('.button1').text('Its changing!');
+  })
+  
+  $('.button3').click(() => {
+    $('button').css('background-color', 'blue');
+  })
