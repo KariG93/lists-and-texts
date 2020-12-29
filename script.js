@@ -32,12 +32,18 @@ $('main').append(`<p>${additionalBlock.text}</p>`);
 
 $('button').click(() => {
     console.log("Yeah, you clicked me")
-  })
+})
 
-  $('.anotherButton').click(() => {
+$('.anotherButton').click(() => {
     $('.button1').text('Its changing!');
-  })
+})
   
-  $('.button3').click(() => {
+$('.button3').click(() => {
     $('button').css('background-color', 'blue');
-  })
+})
+
+$('.button3').on( "click", function() {
+    let color = document.getElementById("colorName").value;
+    $('button').css('background-color', color);
+    $( ".button3" ).off();
+})
